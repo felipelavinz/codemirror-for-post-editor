@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: CodeMirror for posts editor
+Plugin Name: CodeMirror for Post Editor
 Plugin URI: http://www.yukei.net
 Description: Use the CodeMirror code editor component on the HTML editor in posts
 Version: 0.1
