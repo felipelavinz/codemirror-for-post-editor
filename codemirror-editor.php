@@ -64,7 +64,7 @@ class CodeMirrorEditor{
 		wp_enqueue_style('jquery-ui-dialog');
 	}
 	private function plugin_url( $path ){
-		return plugins_url('codemirror-editor/'. $path);
+		return plugins_url('codemirror-for-post-editor/'. $path);
 	}
 	public function addEditorButton( $buttons ){
 		array_push($buttons, "|", "codemirror_editor");
