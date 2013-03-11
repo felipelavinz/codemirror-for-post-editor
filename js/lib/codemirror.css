@@ -37,7 +37,7 @@
   min-width: 20px;
   text-align: right;
   color: #999;
-  font-family: 'LMMono10', 'Ubuntu Mono';
+  font-family: 'LMMono10', 'Ubuntu Mono', Consolas, monospace;
   font-size: 19px;
   line-height: 24px;
 }
