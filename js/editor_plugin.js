@@ -96,7 +96,10 @@
 				beforeClose: function(event, ui){
 					// update wp-editor value
 					var value = codeMirrorEditor.editor.getValue('<br>');
-					$('#content').val( value ).trigger('change');
+					value = $('<div id="codemirror_editor-temp-buffer">' + value +'</div>');
+					// kind of a quick-n-dirty hack to avoid unnecessary line breaks
+					value.find('* > br').remove();
+					$('#content').val( value.html() ).trigger('change');
 					tinymce.activeEditor.load();
 				},
 				close: function(event, ui){
