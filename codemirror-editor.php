@@ -3,7 +3,7 @@
 Plugin Name: CodeMirror for Post Editor
 Plugin URI: http://www.yukei.net
 Description: Use the CodeMirror code editor component on the HTML editor in posts
-Version: 0.1
+Version: 0.2
 Author: Felipe Lavín
 Author URI: http://www.yukei.net
 License: GPL3
@@ -11,7 +11,7 @@ License: GPL3
 
 class CodeMirrorEditor{
 	const codemirror_version = '3.1';
-	const plugin_ver = '1';
+	const plugin_ver = '2';
 	private static $instance;
 	private function __construct(){
 		add_action('admin_enqueue_scripts', array($this, 'enqueueStuff'));
