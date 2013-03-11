@@ -1,6 +1,4 @@
 (function($, window) {
-	// Load plugin specific language pack
-	// tinymce.PluginManager.requireLangPack('embedded_video');
 	window.codeMirrorEditor = {};
 	tinymce.create('tinymce.plugins.codeMirrorEditorPlugin', {
 		init : function(ed, url) {
