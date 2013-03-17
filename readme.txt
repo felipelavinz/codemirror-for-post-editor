@@ -38,7 +38,7 @@ The following desktop browsers are able to run CodeMirror:
 
 = How can I contribute with an idea or feature request? Where can I report bugs? =
 
-Checkout my [project repository on GitHub](https://github.com/felipelavinz/codemirror-editor)
+Checkout my [project repository on GitHub](https://github.com/felipelavinz/codemirror-for-post-editor)
 
 == Screenshots ==
 
