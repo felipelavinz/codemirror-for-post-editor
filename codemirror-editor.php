@@ -32,12 +32,12 @@ class CodeMirrorEditor{
 		trigger_error('Clone is not allowed.', E_USER_ERROR);
 	}
 	public function addContainer(){
-		if ( get_current_screen()->id !== 'post' )
+		if ( get_current_screen()->base !== 'post' )
 			return;
 		echo '<div id="codemirror_editor-container"></div>';
 	}
 	public function printScript(){
-		if ( get_current_screen()->id !== 'post' )
+		if ( get_current_screen()->base !== 'post' )
 			return;
 		$options = array(
 			'actionurl' => add_query_arg(array(
@@ -50,7 +50,7 @@ class CodeMirrorEditor{
 	}
 	public function enqueueStuff(){
 		// only enqueue stuff on the post editor page
-		if ( get_current_screen()->id !== 'post' )
+		if ( get_current_screen()->base !== 'post' )
 			return;
 		wp_enqueue_script('codemirror-main', $this->plugin_url('/js/lib/codemirror.js'), array(), self::codemirror_version, true);
 		wp_enqueue_script('codemirror-xml',  $this->plugin_url('/js/mode/xml/xml.js'), array('codemirror-main'), self::codemirror_version, true);
