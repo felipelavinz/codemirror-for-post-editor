@@ -3,7 +3,7 @@ Contributors: felipelavinz
 Tags: post, editor, code, html, writing
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 0.2.1
+Stable tag: 0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,11 @@ Checkout my [project repository on GitHub](https://github.com/felipelavinz/codem
 2. The editor opens on a big and wide dialog, so you can focus on your code
 
 == Changelog ==
+
+= 0.3 =
+
+* Updated CodeMirror version to 3.2.0
+* Fixed z-index issues with the new WordPress image library (and... using the new library methods instead of the old uploader)
 
 = 0.2.1 =
 
