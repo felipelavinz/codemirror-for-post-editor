@@ -18,7 +18,7 @@
 				author : 'Felipe Lavín;',
 				authorurl : 'http://www.yukei.net',
 				infourl : 'http://www.yukei.net',
-				version : '0.2'
+				version : '0.3'
 			};
 		},
 		// Private methods
@@ -52,9 +52,6 @@
 					}
 				} );
 			}
-			/**
-			 * @todo: agregar boton para insertar imágenes y documentos; sobreescribiendo send_to_editor
-			 */
 			$(codeMirror_container).dialog({
 				dialogClass: 'wp-dialog',
 				resizable: false,
@@ -63,21 +60,22 @@
 				closeOnEscape: true,
 				buttons: [{
 					text: 'Insert Media',
-					click: function(){
-						var _send_to_editor_original = window.send_to_editor;
-						window.send_to_editor = function( html ){
-							var editorDoc = codeMirrorEditor.editor.getDoc(),
-								currentPosition = editorDoc.getCursor(),
-								currentLine = editorDoc.getLine( currentPosition.line );
+					click: function(ui, event){
+						var dialog = $(this);
+						wp.media.editor.open();
+						var original_insert = wp.media.editor.insert;
+						var editorDoc = codeMirrorEditor.editor.getDoc(),
+							currentPosition = editorDoc.getCursor(),
+							currentLine = editorDoc.getLine( currentPosition.line );
+						wp.media.editor.insert = function( html ){
+							dialog.dialog('open');
 							var newLine = currentLine.substring(0, currentPosition.ch ) + html + currentLine.substring( currentPosition.ch + 1 );
 							editorDoc.setLine( currentPosition.line, newLine );
+							editorDoc.setCursor( currentPosition.line, currentPosition.ch + newLine.length );
 							codeMirrorEditor.editor.focus();
-							try {
-								tb_close();
-							} catch (e) { }
-							window.send_to_editor = _send_to_editor_original;
+							wp.media.editor.insert = original_insert;
 						};
-						$('#wp-content-media-buttons a').trigger('click');
+						dialog.dialog('close');
 					}
 				}, {
 					text: 'Update entry',
