@@ -3,7 +3,7 @@
 Plugin Name: CodeMirror for Post Editor
 Plugin URI: http://www.yukei.net
 Description: Use the CodeMirror code editor component on the HTML editor in posts
-Version: 0.2
+Version: 0.3.1
 Author: Felipe Lavín
 Author URI: http://www.yukei.net
 License: GPL3
