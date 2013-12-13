@@ -2,8 +2,8 @@
 Contributors: felipelavinz
 Tags: post, editor, code, html, writing
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 0.3
+Tested up to: 3.8
+Stable tag: 0.3.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
