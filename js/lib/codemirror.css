@@ -3,6 +3,9 @@
   font-family: "dashicons";
   content: "\f499";
 }
+.mce-cm-for-posts-editor button i{
+  background-image: none !important;
+}
 
 /* BASICS */
 

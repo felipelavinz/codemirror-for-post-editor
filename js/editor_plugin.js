@@ -8,7 +8,8 @@
 			ed.addButton('codemirror_editor',{
 				title : 'CodeMirror Editor',
 				classes: 'widget btn cm-for-posts-editor',
-				cmd : 'init_codemirror_editor'
+				cmd : 'init_codemirror_editor',
+				image : url + '/img/editor.png'
 			});
 		},
 
