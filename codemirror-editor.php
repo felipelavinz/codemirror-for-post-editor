@@ -10,8 +10,8 @@ License: GPL3
 */
 
 class CodeMirrorEditor{
-	const codemirror_version = '3.1';
-	const plugin_ver = '3';
+	const codemirror_version = '3.2.0';
+	const plugin_ver = '4';
 	private static $instance;
 	private function __construct(){
 		add_action('admin_enqueue_scripts', array($this, 'enqueueStuff'));
