@@ -3,7 +3,7 @@
 Plugin Name: CodeMirror for Post Editor
 Plugin URI: http://www.yukei.net
 Description: Use the CodeMirror code editor component on the HTML editor in posts
-Version: 0.3.1
+Version: 0.4
 Author: Felipe Lavín
 Author URI: http://www.yukei.net
 License: GPL3
@@ -11,7 +11,7 @@ License: GPL3
 
 class CodeMirrorEditor{
 	const codemirror_version = '3.2.0';
-	const plugin_ver = '3';
+	const plugin_ver = '4';
 	private static $instance;
 	private function __construct(){
 		add_action('admin_enqueue_scripts', array($this, 'enqueueStuff'));
@@ -54,14 +54,13 @@ class CodeMirrorEditor{
 			return;
 		wp_enqueue_script('codemirror-main', $this->plugin_url('/js/lib/codemirror.js'), array(), self::codemirror_version, true);
 		wp_enqueue_script('codemirror-xml',  $this->plugin_url('/js/mode/xml/xml.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-css',  $this->plugin_url('/js/mode/css/css.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-js',   $this->plugin_url('/js/mode/javascript/javascript.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-html', $this->plugin_url('/js/mode/htmlmixed/htmlmixed.js'), array('codemirror-main', 'codemirror-xml', 'codemirror-css', 'codemirror-js'), self::codemirror_version, true);
+		// wp_enqueue_script('codemirror-css',  $this->plugin_url('/js/mode/css/css.js'), array('codemirror-main'), self::codemirror_version, true);
+		// wp_enqueue_script('codemirror-js',   $this->plugin_url('/js/mode/javascript/javascript.js'), array('codemirror-main'), self::codemirror_version, true);
+		wp_enqueue_script('codemirror-html', $this->plugin_url('/js/mode/htmlmixed/htmlmixed.js'), array('codemirror-main', 'codemirror-xml'), self::codemirror_version, true);
 		wp_enqueue_script('codemirror-autocomplete', $this->plugin_url('/js/addon/edit/closetag.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_style('codemirror-style', $this->plugin_url('/js/lib/codemirror.css'), array(), 'screen');
-		wp_enqueue_style('codemirror-theme', $this->plugin_url('/js/theme/monokai.css'), array('codemirror-style'), 'screen');
+		wp_enqueue_style('codemirror-style', $this->plugin_url('/js/lib/codemirror.css'), array('wp-jquery-ui-dialog', 'dashicons'), self::plugin_ver, 'screen');
+		wp_enqueue_style('codemirror-theme', $this->plugin_url('/js/theme/monokai.css'), array('codemirror-style'), self::codemirror_version, 'screen');
 		wp_enqueue_script('jquery-ui-dialog');
-		wp_enqueue_style('jquery-ui-dialog');
 	}
 	private function plugin_url( $path ){
 		return plugins_url('codemirror-for-post-editor/'. $path);
