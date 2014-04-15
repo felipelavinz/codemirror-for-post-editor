@@ -7,8 +7,8 @@
 			ed.addCommand('init_codemirror_editor', t._init_codemirror_editor, t);
 			ed.addButton('codemirror_editor',{
 				title : 'CodeMirror Editor',
-				cmd : 'init_codemirror_editor',
-				image : url + '/img/editor.png'
+				classes: 'widget btn cm-for-posts-editor',
+				cmd : 'init_codemirror_editor'
 			});
 		},
 
@@ -18,7 +18,7 @@
 				author : 'Felipe Lavín;',
 				authorurl : 'http://www.yukei.net',
 				infourl : 'http://www.yukei.net',
-				version : '0.3'
+				version : '0.4'
 			};
 		},
 		// Private methods
