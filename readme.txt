@@ -3,7 +3,7 @@ Contributors: felipelavinz
 Tags: post, editor, code, html, writing
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 0.4
+Stable tag: 0.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ Checkout my [project repository on GitHub](https://github.com/felipelavinz/codem
 2. The editor opens on a big and wide dialog, so you can focus on your code
 
 == Changelog ==
+
+= 0.4.1 =
+
+* Backwards compatibility fix for WordPress 3.8
 
 = 0.4 =
 
