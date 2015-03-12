@@ -1,0 +1,18 @@
+.mce-cm-for-posts-editor button i{
+	background: none;
+}
+.mce-cm-for-posts-editor button i:before{
+	font-family: 'dashicons';
+	content: "\f499";
+}
+#codemirror_editor-container{
+	padding: 0;
+}
+#codemirror_editor-container .CodeMirror-gutters{
+	border-right: 1px dotted #505245;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+.CodeMirror-linenumber{
+	padding: 0 3px 0 5px;
+}
