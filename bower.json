@@ -1,0 +1,29 @@
+{
+  "name": "codemirror-for-post-editor",
+  "version": "1.0.0",
+  "homepage": "https://github.com/felipelavinz/codemirror-for-post-editor",
+  "authors": [
+    "Felipe Lavín Z. <felipe@yukei.net>"
+  ],
+  "description": "Write beautiful code using the CodeMirror component for your WordPress posts.",
+  "keywords": [
+    "post",
+    "editor",
+    "code",
+    "html",
+    "writing"
+  ],
+  "license": "GPL3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "~5.0.0"
+  }
+}

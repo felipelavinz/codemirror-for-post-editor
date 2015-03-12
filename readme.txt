@@ -2,12 +2,12 @@
 Contributors: felipelavinz
 Tags: post, editor, code, html, writing
 Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 0.4.1
+Tested up to: 4.1.1
+Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Write beautiful HTML code using the CodeMirror component for your WordPress posts.
+Write beautiful code using the CodeMirror component for your WordPress posts.
 
 == Description ==
 
@@ -69,7 +69,7 @@ Checkout my [project repository on GitHub](https://github.com/felipelavinz/codem
 
 = 0.2 =
 
-* Fixes uncorrect line breaks inside lists and other elements
+* Fixes incorrect line breaks inside lists and other elements
 
 = 0.1 =
 

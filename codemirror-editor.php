@@ -2,16 +2,16 @@
 /*
 Plugin Name: CodeMirror for Post Editor
 Plugin URI: http://www.yukei.net
-Description: Use the CodeMirror code editor component on the HTML editor in posts
-Version: 0.4.1
+Description: Write beautiful code using the CodeMirror editor on your posts
+Version: 1.0.0
 Author: Felipe Lavín
 Author URI: http://www.yukei.net
 License: GPL3
 */
 
 class CodeMirrorEditor{
-	const codemirror_version = '3.2.0';
-	const plugin_ver = '4';
+	const codemirror_version = '5.0.0';
+	const plugin_ver = '5';
 	private static $instance;
 	private function __construct(){
 		add_action('admin_enqueue_scripts', array($this, 'enqueueStuff'));
@@ -52,14 +52,14 @@ class CodeMirrorEditor{
 		// only enqueue stuff on the post editor page
 		if ( get_current_screen()->base !== 'post' )
 			return;
-		wp_enqueue_script('codemirror-main', $this->plugin_url('/js/lib/codemirror.js'), array(), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-xml',  $this->plugin_url('/js/mode/xml/xml.js'), array('codemirror-main'), self::codemirror_version, true);
-		// wp_enqueue_script('codemirror-css',  $this->plugin_url('/js/mode/css/css.js'), array('codemirror-main'), self::codemirror_version, true);
-		// wp_enqueue_script('codemirror-js',   $this->plugin_url('/js/mode/javascript/javascript.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-html', $this->plugin_url('/js/mode/htmlmixed/htmlmixed.js'), array('codemirror-main', 'codemirror-xml'), self::codemirror_version, true);
-		wp_enqueue_script('codemirror-autocomplete', $this->plugin_url('/js/addon/edit/closetag.js'), array('codemirror-main'), self::codemirror_version, true);
-		wp_enqueue_style('codemirror-style', $this->plugin_url('/js/lib/codemirror.css'), array('wp-jquery-ui-dialog', 'dashicons'), self::plugin_ver, 'screen');
-		wp_enqueue_style('codemirror-theme', $this->plugin_url('/js/theme/monokai.css'), array('codemirror-style'), self::codemirror_version, 'screen');
+		wp_enqueue_script('codemirror-main', $this->plugin_url('/assets/codemirror/lib/codemirror.js'), array(), self::codemirror_version, true);
+		wp_enqueue_script('codemirror-xml',  $this->plugin_url('/assets/codemirror/mode/xml/xml.js'), array('codemirror-main'), self::codemirror_version, true);
+		// wp_enqueue_script('codemirror-css',  $this->plugin_url('/assets/codemirror/mode/css/css.js'), array('codemirror-main'), self::codemirror_version, true);
+		// wp_enqueue_script('codemirror-js',   $this->plugin_url('/assets/codemirror/mode/javascript/javascript.js'), array('codemirror-main'), self::codemirror_version, true);
+		wp_enqueue_script('codemirror-html', $this->plugin_url('/assets/codemirror/mode/htmlmixed/htmlmixed.js'), array('codemirror-main', 'codemirror-xml'), self::codemirror_version, true);
+		wp_enqueue_script('codemirror-autocomplete', $this->plugin_url('/assets/codemirror/addon/edit/closetag.js'), array('codemirror-main'), self::codemirror_version, true);
+		wp_enqueue_style('codemirror-style', $this->plugin_url('/assets/codemirror/lib/codemirror.css'), array('wp-jquery-ui-dialog', 'dashicons'), self::plugin_ver, 'screen');
+		wp_enqueue_style('codemirror-theme', $this->plugin_url('/assets/codemirror/theme/monokai.css'), array('codemirror-style'), self::codemirror_version, 'screen');
 		wp_enqueue_script('jquery-ui-dialog');
 	}
 	private function plugin_url( $path ){
